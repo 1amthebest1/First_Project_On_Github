@@ -8,6 +8,7 @@ sudo python3 -m http.server
 start up netcat listener using 
 
 nc -l -p [port]
+
 nc -l -p [port] -s [ip]
 
 
