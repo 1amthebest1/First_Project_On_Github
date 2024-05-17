@@ -1,6 +1,8 @@
 start up the apache server using
 
-sudo systemctl restart apache2     # For Ubuntu, Debian, and other systemd-based distributions
+sudo systemctl restart apache2  
+
+# For Ubuntu, Debian, and other systemd-based distributions
 
 start up python server using
 sudo python3 -m http.server
@@ -13,8 +15,4 @@ nc -l -p [port]
 nc -l -p [port] -s [ip]
 
 
-# Hello Project
-# NeW Repository
-# Hello
-# Fire Repository
-# Hello
+
