@@ -4,10 +4,16 @@ document.getElementById('runCommandButton').addEventListener('click', function()
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById('output').textContent = data.output || data.message;
+        if (data.status === 'success') {
+            document.getElementById('output').textContent = data.output;
+        } else {
+            document.getElementById('output').textContent = 'Error: ' + data.message;
+            console.error('Error Output:', data.error);
+        }
     })
     .catch(error => {
-        console.error('Error:', error);
-        document.getElementById('output').textContent = 'An error occurred';
+        console.error('Fetch Error:', error);
+        document.getElementById('output').textContent = 'An error occurred while trying to run the command';
     });
 });
+
